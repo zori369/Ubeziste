@@ -122,17 +122,31 @@ main {
     color: #ce5c1e;
 }
 
-/* INLINE SVGs should follow the card's text color */
+/* -------- SVG ICONS --------
+   NOTE:
+   - Inline <svg class="svg"> will recolor via currentColor.
+   - <img class="svg"> (phone/facebook etc.) will NOT recolor (CSS color doesn't affect images).
+*/
+
 .svg {
     width: 50px;
     height: auto;
     display: inline-block;
-    color: inherit;   /* ✅ key change: SVG fill="currentColor" will follow this */
+    color: inherit; /* inline SVG uses this */
 }
 
-/* Keep this rule harmless (works if an inline SVG is a direct child) */
-.info_box.even > .svg {
-    color: #ce5c1e;
+/* Force correct icon color for inline SVGs inside cards */
+.info_box .svg {
+    color: #f5e7c6; /* icons on orange cards */
+}
+
+.info_box.even .svg {
+    color: #ce5c1e; /* icons on white cards */
+}
+
+/* Keep phone/facebook icons as they are (they are <img>, and should stay dark) */
+.conRow img.svg {
+    color: initial;
 }
 
 .con {
@@ -355,7 +369,7 @@ header {
         width: fit-content;
     }
 
-    /* Mobile contacts rows become orange */
+    /* Mobile contacts rows become orange (keep icons dark as requested) */
     .conRow {
         background-color: #ce5c1e;
         color: #f5e7c6;
