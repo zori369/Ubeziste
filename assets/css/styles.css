@@ -357,6 +357,14 @@ header {
         color: #f5e7c6;
     }
 
+    .info_box .svg {
+        color: #ce5c1e; 
+    }
+
+    .info_box.even .svg {
+        color: #f5e7c6;
+    }
+
     .column {
         gap: 20px;
     }
@@ -466,3 +474,4 @@ header {
         width: 20px;
     }
 }
+
