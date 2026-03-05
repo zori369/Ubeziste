@@ -1,8 +1,8 @@
 body {
     font-family: 'Poppins', sans-serif;
-	padding: 0;
-	margin: 0;
-	background-color: #2d1406;
+    padding: 0;
+    margin: 0;
+    background-color: #2d1406;
     color: #f5e7c6;
 }
 
@@ -44,13 +44,13 @@ p {
     min-height: 100vh;
     background: url('../img/background.png') top center no-repeat;
     background-size: 2000px auto;
-    background-color: #2c1505; 
+    background-color: #2c1505;
     background-attachment: scroll;
     overflow-x: hidden;
     width: 2000px;
-    box-shadow: 
-    -40px 0 60px -20px rgba(0, 0, 0, 0.4),
-     40px 0 60px -20px rgba(0, 0, 0, 0.4);
+    box-shadow:
+        -40px 0 60px -20px rgba(0, 0, 0, 0.4),
+         40px 0 60px -20px rgba(0, 0, 0, 0.4);
 }
 
 header {
@@ -73,7 +73,7 @@ nav {
     gap: 30px
 }
 
-nav>a {
+nav > a {
     color: #f5e7c6;
     text-decoration: none;
     font-weight: 500;
@@ -171,29 +171,29 @@ main {
 }
 
 .imergency:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px 0 #f5e7c6; 
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 0 #f5e7c6;
 }
 
-.imergency>a {
+.imergency > a {
     font-size: 24px;
     color: #f5e7c6;
     text-decoration: none;
     font-weight: 500;
 }
 
-.imergency>a>img {
+.imergency > a > img {
     width: 70px;
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    font-size: 12px;  
+    font-size: 12px;
     background-color: #ce5c1e;
 }
 
-footer>p {
+footer > p {
     color: #f5e7c6;
     margin: 0;
     font-size: 12px;
@@ -202,69 +202,69 @@ footer>p {
 /* --- Layout and general styles --- */
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  position: relative;
-  z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    z-index: 100;
 }
 
 .language-switcher {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* --- Desktop nav --- */
 
 .desktop-nav {
-  display: flex;
+    display: flex;
 }
 
 /* --- Burger icon --- */
 
 .burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  width: 24px;
-  height: 18px;
-  justify-content: space-between;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+    height: 18px;
+    justify-content: space-between;
 }
 
 .burger div {
-  height: 3px;
-  background-color: #f5e7c6;
-  border-radius: 2px;
-  transition: 0.4s;
+    height: 3px;
+    background-color: #f5e7c6;
+    border-radius: 2px;
+    transition: 0.4s;
 }
 
 /* --- Burger animation --- */
 
 .burger.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 .burger.active div:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .burger.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* --- Mobile menu --- */
 
 .mobile-menu {
-  position: absolute;
-  top: 60px;
-  right: 1rem;
-  background: #ce5c1e;
-  flex-direction: column;
-  align-items: center;
-  display: none;
-  padding: 1rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background: #ce5c1e;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 
 .mobile-menu .language-switcher {
@@ -273,28 +273,26 @@ header {
 }
 
 .mobile-menu nav {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .mobile-menu .language-switcher {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .mobile-menu.show {
-  display: flex;
+    display: flex;
 }
 
 /* ---------- 1300px ---------- */
 
 @media screen and (max-width: 1300px) {
-
     .background-wrapper {
         padding: 0 50px;
         background-size: 1500px auto;
     }
-
 }
 
 /* ---------- 1000px ---------- */
@@ -317,7 +315,7 @@ header {
         gap: 12px;
     }
 
-    nav>a {
+    nav > a {
         font-size: 18px;
     }
 
@@ -329,16 +327,16 @@ header {
         display: block;
     }
 
-    /* Fix card color order when stacked */
-
+    /* Fix card color order when stacked:
+       Invert ONLY the 2nd column so it becomes Orange → White on mobile */
     .main_container .column:nth-child(2) .info_box {
-        background-color: #ce5c1e;
-        color: #f5e7c6;
+        background-color: #f5e7c6; /* white */
+        color: #ce5c1e;
     }
 
     .main_container .column:nth-child(2) .info_box.even {
-        background-color: #f5e7c6;
-        color: #ce5c1e;
+        background-color: #ce5c1e; /* orange */
+        color: #f5e7c6;
     }
 
     .column {
@@ -359,14 +357,13 @@ header {
         border: 10px solid #ce5c1e;
     }
 
-    .imergency>a>img {
+    .imergency > a > img {
         width: 30px;
     }
 
-    .imergency>a {
+    .imergency > a {
         font-size: 18px;
     }
-
 }
 
 /* ---------- 700px ---------- */
@@ -423,7 +420,7 @@ header {
         font-size: 16px;
     }
 
-    .conRow>p {
+    .conRow > p {
         font-size: 16px;
     }
 
@@ -433,12 +430,11 @@ header {
         border: 6px solid #ce5c1e;
     }
 
-    .imergency>a {
+    .imergency > a {
         font-size: 14px;
     }
 
-    .imergency>a>img {
+    .imergency > a > img {
         width: 20px;
     }
-
 }
