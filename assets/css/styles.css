@@ -122,13 +122,17 @@ main {
     color: #ce5c1e;
 }
 
-.info_box.even > .svg {
-    color: #ce5c1e;
-}
-
+/* INLINE SVGs should follow the card's text color */
 .svg {
     width: 50px;
-    color: #f5e7c6;
+    height: auto;
+    display: inline-block;
+    color: inherit;   /* ✅ key change: SVG fill="currentColor" will follow this */
+}
+
+/* Keep this rule harmless (works if an inline SVG is a direct child) */
+.info_box.even > .svg {
+    color: #ce5c1e;
 }
 
 .con {
@@ -351,11 +355,12 @@ header {
         width: fit-content;
     }
 
+    /* Mobile contacts rows become orange */
     .conRow {
         background-color: #ce5c1e;
         color: #f5e7c6;
     }
-    
+
     .conRow .contactText {
         color: #f5e7c6;
     }
@@ -447,4 +452,3 @@ header {
         width: 20px;
     }
 }
-
