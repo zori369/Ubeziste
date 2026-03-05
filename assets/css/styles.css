@@ -318,7 +318,7 @@ header {
     .column:first-child {
         margin-bottom: 20px;
     }
-    .column:second-child {
+    .column:nth-child(2) {
         flex-direction: column-reverse;
     }
     .con {
@@ -389,4 +389,5 @@ header {
     .imergency>a>img {
         width: 20px;
     }
+
 }
