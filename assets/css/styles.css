@@ -351,6 +351,15 @@ header {
         width: fit-content;
     }
 
+    .conRow {
+        background-color: #ce5c1e;
+        color: #f5e7c6;
+    }
+    
+    .conRow .contactText {
+        color: #f5e7c6;
+    }
+
     .imergency {
         width: 100px;
         height: 100px;
@@ -438,3 +447,4 @@ header {
         width: 20px;
     }
 }
+
