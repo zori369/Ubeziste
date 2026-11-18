@@ -69,3 +69,35 @@ body{background:var(--brown)}.site-header{background:var(--brown);color:var(--cr
 .rescue-option .btn-chevron{flex:none}
 .rescue-nav #rescue-back{display:inline-flex;align-items:center;gap:6px}
 .rescue-side #rescue-skip{display:flex;justify-content:space-between;align-items:center;gap:8px}
+
+/* Crawlable wildlife library, preserving the sanctuary palette. */
+.wildlife-library{background:var(--cream);color:var(--brown)}
+.wildlife-library h1{font-size:clamp(2.3rem,5.2vw,4rem);max-width:23ch}
+.wildlife-library h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:32ch;margin:36px 0 14px}
+.wildlife-library p,.wildlife-library li{max-width:80ch}
+.wildlife-library .intro{max-width:76ch}
+.wildlife-library .breadcrumbs{font-size:14px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:28px}
+.breadcrumbs .btn-chevron{width:14px;height:14px}
+.wildlife-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.wildlife-card{display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:22px;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;text-decoration:none;background:var(--cream);min-width:0}
+.wildlife-card strong{font-size:18px;line-height:1.35}
+.wildlife-card p{font-size:14px;line-height:1.5}
+.wildlife-card .card-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:700;font-size:14px}
+.wildlife-card:hover{background:color-mix(in srgb,var(--accent) 15%,var(--cream))}
+.wildlife-library .library-action,.found-teaser .library-action,.help .library-action{display:inline-flex;align-items:center;gap:8px;background:var(--brown);color:var(--cream);padding:12px 18px;min-height:48px;text-decoration:none;font-weight:700;border-radius:6px;margin:16px 0}
+.library-action:hover{background:var(--sos)}
+.wildlife-library .situations{display:grid;gap:14px;margin:20px 0}
+.wildlife-library .situations article{border-left:3px solid var(--accent);padding:12px 18px;background:#ce5c1e12}
+.wildlife-library .situations p{margin-top:6px}
+.wildlife-library ol{padding-left:1.4em}
+.wildlife-library ol li{padding:6px 0}
+.wildlife-library .species-table{width:100%;border-collapse:collapse;margin-top:18px;font-size:15px;table-layout:fixed}
+.wildlife-library .species-table th,.wildlife-library .species-table td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);overflow-wrap:anywhere;vertical-align:top}
+.wildlife-library .species-table th{background:var(--brown);color:var(--cream)}
+.wildlife-library .species-table em{font-size:14px}
+.wildlife-library .source-list{font-size:14px;overflow-wrap:anywhere;padding-left:1.3em}
+.wildlife-library .other-guides{margin-top:26px}
+.wildlife-library .notice{border-left:3px solid var(--sos);padding:12px 16px;background:#ce5c1e15;margin:18px 0}
+.footer .library-footer{display:block;margin-top:8px;font-size:14px;color:var(--cream)}
+@media(max-width:900px){.wildlife-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.wildlife-cards{grid-template-columns:1fr}.wildlife-card{padding:18px}.wildlife-library .species-table th,.wildlife-library .species-table td{padding:9px 5px;font-size:13px}.wildlife-library .species-table em{font-size:12px}}
