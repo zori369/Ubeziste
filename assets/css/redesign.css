@@ -101,3 +101,7 @@ body{background:var(--brown)}.site-header{background:var(--brown);color:var(--cr
 .footer .library-footer{display:block;margin-top:8px;font-size:14px;color:var(--cream)}
 @media(max-width:900px){.wildlife-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.wildlife-cards{grid-template-columns:1fr}.wildlife-card{padding:18px}.wildlife-library .species-table th,.wildlife-library .species-table td{padding:9px 5px;font-size:13px}.wildlife-library .species-table em{font-size:12px}}
+
+/* Keep document scrolling enabled but hide its visible scrollbar. */
+html { scrollbar-width: none; -ms-overflow-style: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
