@@ -151,3 +151,76 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
  .site-header .nav-links{column-gap:10px}
  .site-header .nav-links a{font-size:12px;min-height:44px;padding:6px 0}
 }
+
+
+/* Authentic memorial photograph in the About section.
+   The paper and masking tape are part of the approved image itself. */
+#about .about-memorial-layout {
+  grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 58px);
+}
+#about .about-memorial-layout > div { min-width: 0; }
+#about .memorial-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.07fr);
+  gap: clamp(8px, 1.4vw, 22px);
+  align-items: center;
+  min-width: 0;
+  padding: clamp(18px, 2vw, 30px);
+  overflow: visible;
+}
+#about .memorial-story-copy { min-width: 0; }
+#about .memorial-story-copy .eyebrow { margin-bottom: 16px; }
+#about .memorial-story-copy h3 {
+  font-size: clamp(1.45rem, 2.3vw, 2.05rem);
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+#about .memorial-story-copy > p:last-child {
+  line-height: 1.65;
+}
+#about .memorial-photo {
+  margin: -26px -22px -29px -8px;
+  min-width: 0;
+  transform: rotate(2deg);
+}
+#about .memorial-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+#about .memorial-photo figcaption {
+  font-size: .75rem;
+  color: var(--cream);
+  opacity: .8;
+  text-align: center;
+  margin: -9px 6px 4px;
+}
+@media (max-width: 1040px) {
+  #about .about-memorial-layout {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 24px;
+  }
+  #about .memorial-story-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+  }
+  #about .memorial-photo {
+    max-width: 380px;
+    margin: -25px auto -20px;
+  }
+}
+@media (max-width: 600px) {
+  #about .memorial-story-grid {
+    grid-template-columns: 1fr;
+    padding: 27px 24px 14px;
+    gap: 8px;
+  }
+  #about .memorial-photo {
+    width: min(90%, 330px);
+    margin: 0 auto -15px;
+  }
+  #about .memorial-photo figcaption { margin-top: -7px; }
+}
