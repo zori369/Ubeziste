@@ -133,3 +133,21 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
 .rescue-direct .rescue-aftercare h3{font-size:1.2rem;margin:0 0 8px}
 .rescue-direct .rescue-aftercare p{max-width:850px;line-height:1.6;margin:0}
 @media(max-width:760px){.rescue-direct .contact-directory .contact-card{padding:18px}.rescue-direct .rescue-aftercare{padding:18px}}
+
+/* Unified primary navigation: each of sections 01–05 has a tab; language is separate. */
+.site-header .nav{column-gap:clamp(12px,1.6vw,22px)}
+.site-header .nav-links{display:flex;flex:1;min-width:0;align-items:center;justify-content:flex-end;gap:clamp(8px,1.25vw,18px)}
+.site-header .nav-links a{display:inline-flex;align-items:center;min-height:44px;line-height:1.2;padding:10px 0;white-space:nowrap}
+.site-header .actions{flex:0 0 auto;gap:0}
+.site-header .lang{height:44px;min-height:44px;min-width:48px;display:inline-flex;align-items:center;justify-content:center;line-height:1}
+.site-header .nav-links .mobile-support{display:none}
+@media(max-width:1050px){
+ .site-header .nav{flex-wrap:wrap;row-gap:0}
+ .site-header .actions{margin-left:auto}
+ .site-header .nav-links{order:3;flex:0 0 100%;justify-content:space-between;flex-wrap:wrap;gap:0 14px;padding-bottom:8px}
+ .site-header .nav-links a{min-height:44px}
+}
+@media(max-width:560px){
+ .site-header .nav-links{column-gap:10px}
+ .site-header .nav-links a{font-size:12px;min-height:44px;padding:6px 0}
+}

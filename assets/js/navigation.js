@@ -16,7 +16,6 @@
       if (section.getBoundingClientRect().top <= marker) current = section.id;
     }
     if (window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) current = sections[sections.length - 1].id;
-    if (current === 'project') current = 'about';
     for (const link of links) {
       const selected = link.dataset.section === current;
       link.classList.toggle('nav-current', selected);
