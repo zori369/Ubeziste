@@ -105,3 +105,19 @@ body{background:var(--brown)}.site-header{background:var(--brown);color:var(--cr
 /* Keep document scrolling enabled but hide its visible scrollbar. */
 html { scrollbar-width: none; -ms-overflow-style: none; }
 html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
+
+/* Rescue directory: full-width advice banner with gentle right-hand fade. */
+.rescue-direct > .callout {
+  width: 100%;
+  max-width: none;
+  background: linear-gradient(
+    90deg,
+    rgba(206, 92, 30, 0.17) 0%,
+    rgba(206, 92, 30, 0.12) 62%,
+    rgba(206, 92, 30, 0) 100%
+  );
+}
+.rescue-direct > .callout > h3,
+.rescue-direct > .callout > p {
+  max-width: 850px;
+}
