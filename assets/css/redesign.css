@@ -224,3 +224,41 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
   }
   #about .memorial-photo figcaption { margin-top: -7px; }
 }
+
+/* About section – team, mission, memorial. Uses real archive imagery, no generated portraits. */
+#about .about-content{display:grid;gap:clamp(38px,5vw,64px);margin-top:36px}
+#about .about-content h3{font:400 clamp(1.85rem,3vw,2.45rem)/1.2 Georgia,serif;letter-spacing:-.025em;margin:0 0 22px}
+#about .about-team{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,4vw,70px);align-items:center}
+#about .about-team-photo{min-width:0;padding:18px 8px}
+#about .team-archive-photo{position:relative;margin:0;background:#fff6e5;border:1px solid #f3e4ce;padding:13px 13px 12px;box-shadow:0 13px 29px #2d140627,0 3px 8px #2d140620;transform:rotate(-2deg)}
+#about .team-archive-photo:before,#about .team-archive-photo:after{content:"";position:absolute;z-index:2;width:96px;height:30px;pointer-events:none;background:repeating-linear-gradient(102deg,#e7d8afdd 0 2px,#eee0bddd 2px 7px);box-shadow:0 1px 3px #2d140626;opacity:.9}
+#about .team-archive-photo:before{top:-16px;left:-28px;transform:rotate(-31deg)}
+#about .team-archive-photo:after{bottom:-16px;right:-20px;transform:rotate(-28deg)}
+#about .team-archive-photo img{display:block;width:100%;height:auto;aspect-ratio:900/643;object-fit:cover}
+#about .team-archive-photo figcaption{text-align:center;font-size:12px;line-height:1.45;color:#594233;padding-top:12px}
+#about .about-profiles{display:grid;gap:22px}
+#about .about-person{padding-bottom:18px;border-bottom:1px solid #2d14062e}
+#about .about-person:last-child{border:0;padding-bottom:0}
+#about .about-person h4{font-size:clamp(1.05rem,1.6vw,1.23rem);margin:0 0 9px;color:var(--brown)}
+#about .about-person p{line-height:1.7;max-width:66ch;margin:0}
+#about .about-mission{padding:clamp(26px,3.8vw,48px);border-left:4px solid var(--accent);background:linear-gradient(105deg,#ce5c1e13,#ce5c1e05);border-radius:0 9px 9px 0}
+#about .about-mission .intro{max-width:86ch;margin-top:14px}
+#about .about-mission h3{margin-bottom:20px}
+#about .about-memory{min-width:0}
+#about .about-memory .memorial-story-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(15px,3vw,40px);padding:clamp(25px,3.5vw,42px)}
+#about .about-memory .memorial-photo{width:min(100%,345px);margin:-18px auto -26px}
+#about .about-memory .memorial-story-copy h3{margin:0 0 20px}
+@media(max-width:950px){
+ #about .about-team{grid-template-columns:1fr;gap:16px}
+ #about .about-team-photo{max-width:600px;width:min(100%,600px);margin:0 auto}
+ #about .about-team-copy{padding-top:8px}
+}
+@media(max-width:670px){
+ #about .about-content{margin-top:22px;gap:35px}
+ #about .about-team-photo{padding:22px 16px}
+ #about .team-archive-photo:before{left:-14px}
+ #about .team-archive-photo:after{right:-10px}
+ #about .about-mission{padding:25px 20px}
+ #about .about-memory .memorial-story-grid{grid-template-columns:1fr;padding:27px 23px 18px}
+ #about .about-memory .memorial-photo{width:min(82%,330px);margin:0 auto -18px}
+}
